@@ -1,17 +1,8 @@
+const viewports = require("./viewports");
+
 module.exports = {
   "id": "backstop_default",
-  "viewports": [
-    {
-      "label": "phone",
-      "width": 320,
-      "height": 480
-    },
-    {
-      "label": "tablet",
-      "width": 1024,
-      "height": 768
-    }
-  ],
+  "viewports": viewports,
   "onBeforeScript": "puppet/onBefore.js",
   "onReadyScript": "puppet/onReady.js",
   "scenarios": [
