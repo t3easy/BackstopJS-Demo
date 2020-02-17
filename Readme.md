@@ -9,6 +9,9 @@
     ```
     backstop init
     ```
+1.  Den Ordner `engine_scripts` aus `backstop_data` verschieben und `backstop_data` von der Versionierung ausschließen.
+    Je nach Workflow kann es auch sinnvoll sein, den Ordner `backstop_data/bitmaps_reference` einzuchecken.
+
 
 ## Links
 https://github.com/garris/BackstopJS/
