@@ -1,4 +1,4 @@
-{
+module.exports = {
   "id": "backstop_default",
   "viewports": [
     {
@@ -51,4 +51,4 @@
   "asyncCompareLimit": 50,
   "debug": false,
   "debugWindow": false
-}
+};
