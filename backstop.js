@@ -1,31 +1,35 @@
 const viewports = require("./viewports");
+const defaultScenario = require("./defaultScenario");
+
+const scenarios = [];
+const live = "https://www.google.com";
+const staging = "";
+
+
+const sites = [
+  {"label": "home", "url": "/?hl=en", "referenceUrl": "/?hl=ru"},
+];
+
+sites.map(site => {
+  scenarios.push({
+    ...defaultScenario,
+    ...{
+      ...site,
+      ...{
+        "label": site.label || site.url + (site.clickSelector || ""),
+        "url": staging ? staging + site.url : live + site.url,
+        "referenceUrl": live + (site.referenceUrl || site.url)
+      }
+    }
+  });
+});
 
 module.exports = {
   "id": "backstop_default",
   "viewports": viewports,
   "onBeforeScript": "puppet/onBefore.js",
   "onReadyScript": "puppet/onReady.js",
-  "scenarios": [
-    {
-      "label": "BackstopJS Homepage",
-      "cookiePath": "engine_scripts/cookies.json",
-      "url": "https://garris.github.io/BackstopJS/",
-      "referenceUrl": "",
-      "readyEvent": "",
-      "readySelector": "",
-      "delay": 0,
-      "hideSelectors": [],
-      "removeSelectors": [],
-      "hoverSelector": "",
-      "clickSelector": "",
-      "postInteractionWait": 0,
-      "selectors": [],
-      "selectorExpansion": true,
-      "expect": 0,
-      "misMatchThreshold" : 0.1,
-      "requireSameDimensions": true
-    }
-  ],
+  "scenarios": scenarios,
   "paths": {
     "bitmaps_reference": "backstop_data/bitmaps_reference",
     "bitmaps_test": "backstop_data/bitmaps_test",
