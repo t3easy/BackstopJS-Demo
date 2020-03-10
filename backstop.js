@@ -8,6 +8,9 @@ const staging = "";
 
 const sites = [
   {"label": "home", "url": "/?hl=en", "referenceUrl": "/?hl=ru"},
+  {"label": "home2", "url": "/?hl=fr", "referenceUrl": "/?hl=ru"},
+  {"label": "home3", "url": "/?hl=es", "referenceUrl": "/?hl=ru"},
+  {"label": "home4", "url": "/?hl=ru", "referenceUrl": "/?hl=ru", "delay": 100}
 ];
 
 sites.map(site => {
