@@ -1,3 +1,4 @@
+const id = "google_com";
 const live = "https://www.google.com";
 const staging = "";
 
@@ -27,7 +28,7 @@ sites.map(site => {
 });
 
 module.exports = {
-  "id": "backstop_default",
+  "id": id,
   "viewports": viewports,
   "onBeforeScript": "puppet/onBefore.js",
   "onReadyScript": "puppet/onReady.js",
