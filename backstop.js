@@ -1,10 +1,5 @@
-const viewports = require("./viewports");
-const defaultScenario = require("./defaultScenario");
-
-const scenarios = [];
 const live = "https://www.google.com";
 const staging = "";
-
 
 const sites = [
   {"label": "home", "url": "/?hl=en", "referenceUrl": "/?hl=ru"},
@@ -12,6 +7,10 @@ const sites = [
   {"label": "home3", "url": "/?hl=es", "referenceUrl": "/?hl=ru"},
   {"label": "home4", "url": "/?hl=ru", "referenceUrl": "/?hl=ru", "delay": 100}
 ];
+
+const scenarios = [];
+const viewports = require("./viewports");
+const defaultScenario = require("./defaultScenario");
 
 sites.map(site => {
   scenarios.push({
