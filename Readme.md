@@ -3,7 +3,7 @@
 ## Schritte
 1.  Alias für Docker
     ```
-    alias backstop='docker run --rm -v $(pwd):/src backstopjs/backstopjs "$@"'
+    alias backstop='docker run --rm -v $(pwd):/src backstopjs/backstopjs:6.1.0 "$@"'
     ```
 1.  Konfiguration erzeugen
     ```
